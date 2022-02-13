@@ -8,9 +8,9 @@ import random
 
 
 def main():
-    print("\n\n\n\n\n\n\n\n\n")
+    print("\n\n\n\n\n\n\n\n\n\n\n")
     print("--- PARDLE! ---")
-    print("\n\n\n\n\n\n\n\n\n")
+    print("\n\n\n\n\n\n\n\n\n\n\n")
 
     # Import common word list and select random one as solution
     common_set = load_word_set("DATA/common_five.txt")
@@ -26,7 +26,8 @@ def main():
             print(Fore.RED + f"La parola deve essere lunga {pardle.WORD_LENGTH} caratteri!\n" + Fore.RESET)
             continue
         if x not in word_set:
-            print(Fore.RED + f"Nope, non conosco la tua parola!\n" + Fore.RESET)
+            print(Fore.RED + f"Nope, non conosco la tua parola!" + Fore.RESET)
+            display_results(pardle)
             continue
 
         pardle.attempt(x)
