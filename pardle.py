@@ -9,7 +9,7 @@ class Pardle:
         self.secret: str = secret.upper()
         self.attempts = []
 
-    def attempt(self,word:str):
+    def attempt(self, word: str):
         word = word.upper()
         self.attempts.append(word)
 

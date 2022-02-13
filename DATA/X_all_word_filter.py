@@ -1,10 +1,10 @@
 import unidecode
 
-with open("60000_parole_italiane.txt", "r") as file_in:
+with open("110000_parole_italiane_con_nomi_propri.txt", "r") as file_in:
     five_letters = []
     for word in file_in:
         word = word.strip()
-        if(len(word)==5 and not "\'" in word):
+        if(len(word)==5 and not "\'" in word and unidecode.unidecode(word)==word):
             five_letters.append(word.upper() + "\n")
 
 

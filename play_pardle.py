@@ -20,7 +20,7 @@ def main():
     word_set = load_word_set("DATA/all_five.txt")
 
     while pardle.can_attempt:
-        x = input("\nIndovina la PARDLA: ")
+        x = input("\nIndovina la PARDLA: ").upper()
         
         if len(x) != pardle.WORD_LENGTH:
             print(Fore.RED + f"La parola deve essere lunga {pardle.WORD_LENGTH} caratteri!\n" + Fore.RESET)
